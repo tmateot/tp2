@@ -1,0 +1,17 @@
+body{
+    background-color: aqua;
+}
+.contenedor{
+    text-align: center;
+    font-size: larger;
+    color: white;
+    background-color: rgb(28, 133, 133);
+    max-width: 600px;
+    position: static;
+    margin: auto;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    border-radius: 10px;
+}

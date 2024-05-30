@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 hola como estas?, todo bien?
 =======
 hola amigo, todo bien?
 >>>>>>> ramac2
+=======
+hola pepito, clavo un clavito
+>>>>>>> ramac3

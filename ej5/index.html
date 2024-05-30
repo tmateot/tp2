@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="conteiner">
+        <div >
+            <label for="">Ingresa el valor del Lado (A) en metros</label>
+            <input type="number" name="" id="LadoA"><br><br>
+            <label for="">Ingresa el valor del Lado (B) en metros</label>
+            <input type="number" name="" id="LadoB"><br><br>
+            <label for="">Ingresa el valor del Lado (C) en metros</label>
+            <input type="number" name="" id="LadoC"><br><br>
+            <label for="">Calcular</label>
+            <select name="" id="Calcular" onclick="Area()">
+                <option value="1">Rectangulo</option>
+                <option value="2">Triangulo</option>
+                <option value="3">Area completa</option>
+            </select>
+
+        </div>
+        <h5 >El Area es: <span id="texto"></span></h5>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

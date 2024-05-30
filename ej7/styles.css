@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.contenedor {
+    max-width: 800px;
+    margin: auto;
+}
+.carta-usuario, .carta-tarea {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.completada {
+    background-color: #d4edda;
+}
+.no-completada {
+    background-color: #f8d7da;
+}

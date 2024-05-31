@@ -1,64 +1,74 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #f0f0f0;
+    background-color: #f0f8ff;
 }
 
 .contenedor {
     max-width: 800px;
     margin: auto;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
     color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 .carta-usuario {
-    border: 2px solid #007BFF;
+    border: 1px solid #e0e0e0;
     padding: 20px;
     margin: 10px 0;
     border-radius: 10px;
-    background-color: #e0f7ff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fdfdfd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.carta-usuario:hover {
+    transform: translateY(-5px);
 }
 
 .carta-usuario p {
     margin: 5px 0;
-    color: #555;
+    color: #666;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #FF5733;
+    background-color: #ff7f50;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s;
 }
 
 button:hover {
-    background-color: #C70039;
+    background-color: #ff6347;
+    transform: translateY(-2px);
 }
 
 .carta-tarea {
-    border: 2px solid #007BFF;
+    border: 1px solid #e0e0e0;
     padding: 10px;
     margin: 10px 0;
     border-radius: 10px;
-    background-color: #e0f7ff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .completada {
-    background-color: #CFF09E;
+    background-color: #d4edda;
+    color: #155724;
 }
 
 .no-completada {
-    background-color: #FF6F69;
+    background-color: #f8d7da;
+    color: #721c24;
 }

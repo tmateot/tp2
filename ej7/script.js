@@ -14,34 +14,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>Nombre de usuario: ${usuario.username}</p>
                 <p>Email: ${usuario.email}</p>
                 <p>Sitio web: ${usuario.website}</p>
-                <button onclick="verTarea(${usuario.id}, this)">Ver Tarea</button>
-                <div class="tarea" id="tarea-${usuario.id}"></div>
+                <button onclick="verTareas(${usuario.id}, this)">Ver Tareas</button>
+                <div class="tareas" id="tareas-${usuario.id}"></div>
             `;
             usuariosDiv.appendChild(cartaUsuario);
         });
     }
 });
 
-function verTarea(usuarioId, boton) {
-    const tareaDiv = document.getElementById(`tarea-${usuarioId}`);
-    if (tareaDiv.innerHTML === '') {
-        fetch(`https://jsonplaceholder.typicode.com/todos/${usuarioId}`)
+function verTareas(usuarioId, boton) {
+    const tareasDiv = document.getElementById(`tareas-${usuarioId}`);
+    if (tareasDiv.innerHTML === '') {
+        fetch(`https://jsonplaceholder.typicode.com/todos?userId=${usuarioId}`)
             .then(response => response.json())
-            .then(tarea => mostrarTarea(tarea, tareaDiv, boton));
+            .then(tareas => mostrarTareas(tareas, tareasDiv, boton));
     } else {
-        tareaDiv.innerHTML = '';
-        boton.innerText = 'Ver Tarea';
+        tareasDiv.innerHTML = '';
+        boton.innerText = 'Ver Tareas';
     }
 }
 
-function mostrarTarea(tarea, tareaDiv, boton) {
-    const cartaTarea = document.createElement('div');
-    cartaTarea.className = `carta-tarea ${tarea.completed ? 'completada' : 'no-completada'}`;
-    cartaTarea.innerHTML = `
-        <p>ID: ${tarea.id}</p>
-        <p>Título: ${tarea.title}</p>
-        <p>Completada: ${tarea.completed ? 'Sí' : 'No'}</p>
-    `;
-    tareaDiv.appendChild(cartaTarea);
-    boton.innerText = 'Ocultar Tarea';
+function mostrarTareas(tareas, tareasDiv, boton) {
+    tareasDiv.innerHTML = '<h3>Tareas:</h3>';
+    tareas.forEach(tarea => {
+        const cartaTarea = document.createElement('div');
+        cartaTarea.className = `carta-tarea ${tarea.completed ? 'completada' : 'no-completada'}`;
+        cartaTarea.innerHTML = `
+            <p>ID: ${tarea.id}</p>
+            <p>Título: ${tarea.title}</p>
+            <p>Completada: ${tarea.completed ? 'Sí' : 'No'}</p>
+        `;
+        tareasDiv.appendChild(cartaTarea);
+    });
+    boton.innerText = 'Ocultar Tareas';
 }
